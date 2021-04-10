@@ -1,8 +1,3 @@
-variable "comment" {
-  description = "Comment for the Origin Access Identity."
-  default     = "Built with Terraform"
-}
-
 variable "cloudfront_is_enabled" {
   description = "Boolean for whether cloudfront distribution is enabled."
   default     = true
@@ -11,12 +6,6 @@ variable "cloudfront_is_enabled" {
 variable "cloudfront_is_ipv6_enabled" {
   description = "Boolean for whether cloudfront distribution is ipv6 enabled."
   default     = true
-}
-
-variable "cloudfront_locations" {
-  description = "Locations where CloudFront is enabled."
-  default     = ["US", "CA", "GB", "DE"]
-  type        = list
 }
 
 variable "cloudfront_logging_bucket" {
@@ -79,40 +68,6 @@ variable "cloudfront_cache_cached_methods" {
 
 variable "cloudfront_aliases" {
   description = "Aliases for the domain that the CloudFront Distribution is configured for."
-}
-
-variable "acm_domain_name" {
-  description = "Domain name for the AWS Certificate Manager request."
-}
-
-variable "acm_subject_alternative_names" {
-  description = "Subject Alternative Names (SAN) for the AWS Certificate Manager request."
-}
-
-variable "acm_validation_method" {
-  description = "Method for validating the AWS Certificate Manager request."
-  default     = "DNS"
-}
-
-variable "bucket" {
-  description = "The name of the bucket."
-  type        = string
-  default     = null
-}
-
-variable "logging_target_bucket" {
-  description = "Bucket to send standard logs to."
-  type        = string
-}
-
-variable "logging_target_prefix" {
-  description = "Prefix for standard logs sent to the logging_target_bucket."
-  type        = string
-}
-
-variable "force_destroy" {
-  description = "A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable."
-  default     = false
 }
 
 variable "cloudfront_origin_origin_id" {
