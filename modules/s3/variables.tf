@@ -1,7 +1,6 @@
 variable "bucket" {
   description = "The name of the bucket."
   type        = string
-  default     = null
 }
 
 variable "logging_target_bucket" {
