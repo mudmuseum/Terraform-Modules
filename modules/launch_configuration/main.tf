@@ -16,16 +16,3 @@ resource "aws_launch_configuration" "asg-lc-ec2" {
     create_before_destroy = true
   }
 }
-
-resource "aws_autoscaling_group" "asg-lc-ec2" {
-  availability_zones   = ["us-east-1a"]
-  name                 = var.asg_name
-  desired_capacity     = var.desired_capacity
-  max_size             = var.max_size
-  min_size             = var.min_size
-  launch_configuration = aws_launch_configuration.asg-lc-ec2.name
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
