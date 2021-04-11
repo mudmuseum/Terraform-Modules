@@ -16,4 +16,5 @@ variable "route53_record_ttl" {
 
 variable "route53_record_value" {
   description = "Route53 record value."
+  type        = list
 }
