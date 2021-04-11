@@ -6,11 +6,13 @@ variable "bucket" {
 variable "logging_target_bucket" {
   description = "Bucket to send standard logs to."
   type        = string
+  default     = ""
 }
 
 variable "logging_target_prefix" {
   description = "Prefix for standard logs sent to the logging_target_bucket."
   type        = string
+  default     = ""
 }
 
 variable "force_destroy" {
