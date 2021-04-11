@@ -6,13 +6,13 @@ variable "bucket" {
 variable "logging_target_bucket" {
   description = "Bucket to send standard logs to."
   type        = string
-  default     = null
+  default     = "mudmuseum-logs"
 }
 
 variable "logging_target_prefix" {
   description = "Prefix for standard logs sent to the logging_target_bucket."
   type        = string
-  default     = null
+  default     = "default_prefix"
 }
 
 variable "force_destroy" {
