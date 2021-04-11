@@ -29,6 +29,16 @@ resource "aws_s3_bucket" "s3_bucket" {
     }
   }
 
+  dynamic "grant" {
+    for_each = var.grants
+    content {
+      id          = grant.value["id"]
+      permissions = grant.value["permissions"]
+      type        = grant.value["type"]
+      uri         = grant.value["uri"]
+    }
+  }
+
   lifecycle {
     prevent_destroy = true
   }

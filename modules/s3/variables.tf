@@ -49,3 +49,9 @@ variable "noncurrent_days" {
   description = "Expiration time in days for noncurrent versions."
   default     = null
 }
+
+variable "grants" {
+  description = "A list of maps of grants for the S3 bucket access."
+  type        = map
+  default     = { }
+}
