@@ -32,12 +32,12 @@ variable "enabled" {
 
 variable "abort_incomplete_multipart" {
   description = "Abort Incomplete Multipart Upload after value days."
-  default     = ""
+  default     = null
 }
 
 variable "expiration_days" {
   description = "Objects expire after value days."
-  default     = ""
+  default     = null
 }
 
 variable "expired_object_delete_marker" {
@@ -47,5 +47,5 @@ variable "expired_object_delete_marker" {
 
 variable "noncurrent_days" {
   description = "Expiration time in days for noncurrent versions."
-  default     = ""
+  default     = null
 }
