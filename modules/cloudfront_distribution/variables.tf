@@ -55,6 +55,10 @@ variable "cloudfront_comment" {
   default     = "Managed by Terraform"
 }
 
+variable "cloudfront_cache_policy_id" {
+  description = "CloudFront Cache Policy resource ID for the CloudFront Distritubion."
+}
+
 variable "cloudfront_default_root_object" {
   description = "Default root object that's accessed by the CloudFront Distribution."
   default     = "index.html"
