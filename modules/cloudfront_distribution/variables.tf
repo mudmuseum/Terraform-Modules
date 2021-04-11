@@ -1,3 +1,7 @@
+variable "bucket_region_domain_name" {
+  description = "The Bucket Domain Name association for CloudFront."
+}
+
 variable "cloudfront_is_enabled" {
   description = "Boolean for whether cloudfront distribution is enabled."
   default     = true
