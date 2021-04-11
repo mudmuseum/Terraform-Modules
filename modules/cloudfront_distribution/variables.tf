@@ -1,4 +1,4 @@
-variable "bucket_region_domain_name" {
+variable "bucket_regional_domain_name" {
   description = "The Bucket Domain Name association for CloudFront."
 }
 
