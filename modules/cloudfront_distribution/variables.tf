@@ -83,3 +83,7 @@ variable "ssl_support_method" {
   description = "SSL Support Method, e.g. sni-only."
   default     = "sni-only"
 }
+
+variable "origin_access_identity_cloudfront_path" {
+  description = "The CloudFront Path value of the Origin Access Identity."
+}

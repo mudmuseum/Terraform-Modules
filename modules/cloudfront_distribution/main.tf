@@ -4,7 +4,7 @@ resource "aws_cloudfront_distribution" "cloudfront_distribution" {
     domain_name = var.bucket_regional_domain_name
     origin_id   = var.cloudfront_origin_origin_id
     s3_origin_config {
-      origin_access_identity = var.origin_access_identity_cloudfront_access_identity_path
+      origin_access_identity = var.origin_access_identity_cloudfront_path
     }
   }
 
