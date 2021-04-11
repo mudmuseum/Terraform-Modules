@@ -4,5 +4,5 @@ resource "aws_route53_record" "route53_record" {
   name            = var.route53_record_name
   type            = var.route53_record_type
   ttl             = var.route53_record_ttl
-  records         = [ var.route53_record_value ]
+  records         = var.route53_record_value
 }
