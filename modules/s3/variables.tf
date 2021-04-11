@@ -27,7 +27,7 @@ variable "lifecycle_id" {
 
 variable "enabled" {
   description = "Whether the lifecycle rule is enabled or not."
-  default     = null
+  default     = false
 }
 
 variable "abort_incomplete_multipart" {
