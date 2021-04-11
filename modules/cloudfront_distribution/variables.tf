@@ -82,6 +82,10 @@ variable "cloudfront_origin_origin_id" {
   description = "A unique identifier for an origin."
 }
 
+variable "acm_certificate_arn" {
+  description = "ACM Certificate ARN for CloudFront Distribution."
+}
+
 variable "minimum_protocol_version" {
   description = "Minimum version for TLS for the AWS Certificate Manager certificate in CloudFront."
   default     = "TLSv1.2_2019"
