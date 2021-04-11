@@ -1,16 +1,5 @@
-variable "filter_name" {
-  description = "The AMI name used to filter the AMI search, wildcards allowed."
-  default     = "amzn2-ami-hvm-*-x86_64-gp2"
-}
-
-variable "virtualization_type" {
-  description = "The Virtualization Type filter. Default hvm."
-  default     = "hvm"
-}
-
-variable "owners" {
-  description = "The owner account for the AMI filter."
-  default     = "amazon"
+variable "ami" {
+  description = "The AMI ID to use with the EC2 instance."
 }
 
 variable "instance_type" {

@@ -1,21 +1,5 @@
-data "aws_ami" "ami" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = [ var.filter_name ]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = [ var.virtualization_type ]
-  }
-
-  owners = [ var.owners ]
-}
-
 resource "aws_instance" "ec2_instance" {
-  ami                         = data.aws_ami.ami.id
+  ami                         = var.ami
   instance_type               = var.instance_type
   associate_public_ip_address = var.associate_public_ip_address
   key_name                    = var.key_name
