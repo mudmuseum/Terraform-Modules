@@ -45,7 +45,5 @@ resource "aws_s3_bucket" "s3_bucket" {
     prevent_destroy = true
   }
 
-  acl = "private"
-
   force_destroy = var.force_destroy
 }
