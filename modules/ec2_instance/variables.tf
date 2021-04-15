@@ -44,3 +44,8 @@ variable "root_block_device_volume_type" {
   default     = "gp2"
 }
 
+variable "tags" {
+  description = "Tags to associate to the EC2 instance."
+  default     = { }
+  type        = map
+}

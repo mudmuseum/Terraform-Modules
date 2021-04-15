@@ -13,4 +13,6 @@ resource "aws_instance" "ec2_instance" {
     volume_type = var.root_block_device_volume_type
     encrypted = true
   }
+
+  tags                        = var.tags
 }
