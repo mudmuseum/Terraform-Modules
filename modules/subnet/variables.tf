@@ -12,6 +12,8 @@ variable "public_subnet_availability_zone" {
   default     = "us-east-1a"
 }
 
-variable "public_subnet_tag_name" {
-  description = "Tag 'Name' association for the Public Subnet."
+variable "tags" {
+  description = "Tags for the Subnet."
+  type        = map
+  default     = { }
 }

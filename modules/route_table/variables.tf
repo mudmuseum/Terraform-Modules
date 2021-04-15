@@ -14,6 +14,8 @@ variable "internet_gateway_id" {
   description = "The ID for the Internet Gateway."
 }
 
-variable "route_table_tag_name" {
-  description = "The tag name for the Route Table."
+variable "tags" {
+  description = "The tags for the Route Table."
+  type        = map
+  default     = { }
 }

@@ -11,7 +11,5 @@ resource "aws_route_table" "public_route" {
     gateway_id      = var.internet_gateway_id
   }
 
-  tags = {
-    Name = var.route_table_tag_name
-  }
+  tags = var.tags
 }
