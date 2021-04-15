@@ -4,6 +4,8 @@ resource "aws_acm_certificate" "acm_certificate" {
   subject_alternative_names = var.subject_alternative_names
   validation_method         = var.validation_method
 
+  tags                      = var.tags
+
   lifecycle {
     prevent_destroy = true
   }

@@ -10,3 +10,9 @@ variable "validation_method" {
   description = "Method for validating the AWS Certificate Manager request."
   default     = "DNS"
 }
+
+variable "tags" {
+  description = "Tags for the Certificate."
+  type        = map
+  default     = { }
+}
