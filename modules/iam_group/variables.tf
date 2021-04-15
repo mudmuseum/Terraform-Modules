@@ -6,3 +6,9 @@ variable "path" {
   description = "IAM Group path."
   default     = "/"
 }
+
+variable "tags" {
+  description = "Tags for the IAM Group."
+  type        = map
+  default     = { }
+}
