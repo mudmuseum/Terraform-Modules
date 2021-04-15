@@ -45,6 +45,8 @@ resource "aws_cloudfront_distribution" "cloudfront_distribution" {
     ssl_support_method       = var.ssl_support_method
   }
 
+  tags                       = var.tags
+
   lifecycle {
     prevent_destroy = true
   }

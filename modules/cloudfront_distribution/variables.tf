@@ -99,3 +99,9 @@ variable "ssl_support_method" {
 variable "origin_access_identity_cloudfront_path" {
   description = "The CloudFront Path value of the Origin Access Identity."
 }
+
+variable "tags" {
+  description = "Tags for the Cloudfront Distribution."
+  type        = map
+  default     = { }
+}
