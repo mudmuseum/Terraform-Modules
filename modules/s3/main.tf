@@ -30,7 +30,7 @@ resource "aws_s3_bucket" "s3_bucket" {
   }
 
   dynamic "grant" {
-    for_each = var.grants
+    for_each = length(var.grants) > 0 ? var.grants : []
     content {
       id          = grant.value["id"]
       permissions = grant.value["permissions"]
@@ -44,6 +44,8 @@ resource "aws_s3_bucket" "s3_bucket" {
   lifecycle {
     prevent_destroy = true
   }
+
+  acl = length(var.grants) > 0 ? "" : "private"
 
   force_destroy = var.force_destroy
 }
