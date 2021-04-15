@@ -55,3 +55,9 @@ variable "grants" {
   type        = list
   default     = [ ]
 }
+
+variable "tags" {
+  description = "Tags for the S3 bucket."
+  type        = map
+  default     = { }
+}
