@@ -6,3 +6,9 @@ variable "public_key" {
 variable "key_name" {
   description = "Name of the public key."
 }
+
+variable "tags" {
+  description = "Tags for the Key Pair."
+  type        = map
+  default     = { }
+}
