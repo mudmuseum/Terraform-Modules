@@ -1,6 +1,6 @@
-# variable "rule_name" {
-#   description = "The name of the Rule for the EventBridge target."
-# }
+variable "target_id" {
+  description = "The unique target ID of the Rule for the EventBridge target."
+}
 
 variable "arn" {
   description = "The ARN for the document to execute, i.e. the arn of AWS-RunShellScript."

@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_event_target" "cloudwatch_event_target" {
-#   target_id = var.rule_name
+  target_id = var.target_id
   arn       = var.arn
   rule      = var.rule
   role_arn  = var.role_arn
