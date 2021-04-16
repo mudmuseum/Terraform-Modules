@@ -19,6 +19,6 @@ resource "aws_cloudwatch_event_target" "cloudwatch_event_target" {
 
   retry_policy {
     maximum_event_age_in_seconds = "86400"
-    maximum_retry_attempts       = "0"
+    maximum_retry_attempts       = "185"
   }
 }
