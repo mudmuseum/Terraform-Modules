@@ -7,6 +7,11 @@ variable "description" {
   default     = ""
 }
 
+variable "path" {
+  description = "The Path for the IAM Policy."
+  default     = "/"
+}
+
 variable "policy" {
   description = "A JSON Policy to apply within the IAM Policy resource."
 }
