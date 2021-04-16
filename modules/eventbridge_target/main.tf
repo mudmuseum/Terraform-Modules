@@ -13,7 +13,7 @@ resource "aws_cloudwatch_event_target" "cloudwatch_event_target" {
     for_each = var.run_command_targets
     content {
       key    = run_command_targets.key.value
-      value  = [ run_command_targets.value.value ]
+      values = run_command_targets.value.value
     }
   }
 }
