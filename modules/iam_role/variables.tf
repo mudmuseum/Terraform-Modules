@@ -10,3 +10,8 @@ variable "path" {
   description = "The Path for the IAM Role."
   default     = "/"
 }
+
+variable "tags" {
+  description = "Tags for the IAM Role."
+  default     = { }
+}
