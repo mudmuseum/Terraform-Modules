@@ -12,8 +12,8 @@ resource "aws_cloudwatch_event_target" "cloudwatch_event_target" {
   dynamic "run_command_targets" {
     for_each = var.run_command_targets
     content {
-      key    = run_command_targets.tag_key
-      values = run_command_targets.tag_value
+      key    = run_command_targets.value["tag_key"]
+      values = run_command_targets.value["tag_value"]
     }
   }
 }
