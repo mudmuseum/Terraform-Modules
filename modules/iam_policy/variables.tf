@@ -4,7 +4,7 @@ variable "name" {
 
 variable "description" {
   description = "Description for the IAM Policy."
-  default     = ""
+  default     = null
 }
 
 variable "path" {

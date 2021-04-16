@@ -16,4 +16,9 @@ resource "aws_cloudwatch_event_target" "cloudwatch_event_target" {
       values = run_command_targets.value["tag_value"]
     }
   }
+
+  retry_policy {
+    maximum_event_age_in_seconds = "0"
+    maximum_retry_events         = "0"
+  }
 }
