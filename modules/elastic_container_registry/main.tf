@@ -1,7 +1,7 @@
 resource "aws_ecr_repository" "ecr_repository" {
-  count                = length(var.names)
+  count                = length(var.repositories)
 
-  name                 = var.names[count.index]
+  name                 = var.repositories[count.index].name
   image_tag_mutability = "IMMUTABLE"
 
   encryption_configuration {
@@ -12,5 +12,5 @@ resource "aws_ecr_repository" "ecr_repository" {
     scan_on_push = true
   }
 
-  tags                 = var.tags
+  tags                 = var.repositories[count.index].tags
 }
