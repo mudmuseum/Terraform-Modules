@@ -1,13 +1,17 @@
-variable "rule_name" {
-  description = "The name of the Rule for the EventBridge target."
-}
+# variable "rule_name" {
+#   description = "The name of the Rule for the EventBridge target."
+# }
 
 variable "arn" {
   description = "The ARN for the document to execute, i.e. the arn of AWS-RunShellScript."
 }
 
-variable "input" {
-  description = "The commands block to input, e.g. {\"commands\":[\"echo hi\"]}"
+variable "input_paths" {
+  description = "The input transformation."
+}
+
+variable "input_template" {
+  description = "The template used by the associated document."
 }
 
 variable "rule" {
