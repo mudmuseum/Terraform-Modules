@@ -24,5 +24,5 @@ variable "role_arn" {
 
 variable "run_command_targets" {
   description = "The Key:Values for the targets of the Run Command execution."
-  type        = map
+  type        = list
 }
